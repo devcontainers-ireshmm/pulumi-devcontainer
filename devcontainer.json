@@ -4,7 +4,13 @@
 // - https://code.visualstudio.com/docs/getstarted/settings
 {
   "name": "pulumi",
-  "image": "ghcr.io/pulumi/devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "mounts": [
+		"source=/home/iresh/apic-plan,target=/apic-plan,type=bind"
+  ],
   "customizations": {
     "vscode": {
       "settings": [
@@ -31,12 +37,12 @@
         "redhat.vscode-yaml",
         "esbenp.prettier-vscode",
         "ms-vscode.makefile-tools",
-        "mtunique.vim-fcitx-remote",
         "ms-azuretools.vscode-docker",
         "github.vscode-pull-request-github",
         "ms-vscode-remote.remote-containers",
         "visualstudioexptteam.vscodeintellicode",
-        "bierner.markdown-preview-github-styles"
+        "bierner.markdown-preview-github-styles",
+        "ms-python.black-formatter"
       ]
     }
   },
@@ -62,6 +68,5 @@
   "postCreateCommand": "git submodule update --init --recursive",
   "remoteUser": "vscode",
   "forwardPorts": [1313],
-  "runArgs": ["--network=host"]
+  "runArgs": ["--env-file", ".env"]
 }
-

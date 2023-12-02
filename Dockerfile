@@ -34,6 +34,7 @@ build-essential \
 ca-certificates \
 tmux \
 vim \
+dnsutils \
 "
 RUN set -ex \
     && sudo apt-get update \

@@ -1,6 +1,6 @@
 # Pulumi Dev Container
 
-### [![ghcr.io/pulumi/devcontainer](https://github.com/pulumi/devcontainer/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/pulumi/devcontainer/actions/workflows/build.yaml)
+### [![ghcr.io/pulumi/devcontainer](https://github.com/IreshMM/devcontainer/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/devcontainers-ireshmm/pulumi-devcontainer/actions/workflows/build.yaml)
 
 This repository is designed with deep [VS Code](https://code.visualstudio.com) integration to automate Pulumi IaC and Provider development dependencies and prerequisites as much as possible using [Dev Containers](https://containers.dev/) to prepare your development environment, or even just run your development directly in the browser with [Github CodeSpaces](https://github.com/features/codespaces).
 
@@ -21,7 +21,7 @@ The pulumi Dev Container repository can be added as a submodule to your project 
 To add this repository as a submodule to your project, run the following commands:
 
 ```bash
-git submodule add https://github.com/pulumi/devcontainer .devcontainer
+git submodule add https://github.com/devcontainers-ireshmm/pulumi-devcontainer.git .devcontainer
 git submodule update --init --recursive .devcontainer
 ```
 
